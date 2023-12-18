@@ -1,0 +1,11 @@
+# Arquivos gerados pelo Python
+*.pyc
+__pycache__/
+
+# Ambientes virtuais
+venv/
+ENV/
+
+# Arquivo de configuração do ambiente
+.env
+credentials.json
