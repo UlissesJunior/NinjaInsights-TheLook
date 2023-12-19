@@ -1,9 +1,17 @@
-
-
-# Tech4Humans - Projeto de Análise de Dados do The Look Ecommerce 
+<h1 align="center">
+🥷🖥️<br>Tech4Humans - Projeto de Análise de Dados do The Look Ecommerce 
+</h1>
 
 Bem-vindo ao repositório do projeto de análise de dados desenvolvido para a Tech4Humans em parceria com a Ninja Startup Job e o CEU UNIFEI. 
 Este projeto utiliza a biblioteca Streamlit e outras ferramentas Python para fornecer análises detalhadas do banco de dados The Look Ecommerce. 
+
+<p align="center">
+<img src="images/banner.png">
+<p>
+
+<h4 align="center"><a href="https://ninjainsights-thelook-deploy.streamlit.app/">Clique para visitar o projeto</a></h4>
+
+---
 
 ## Sumário  
 1. [Introdução](#introdução)
@@ -15,7 +23,7 @@ Este projeto utiliza a biblioteca Streamlit e outras ferramentas Python para for
  7. [Licença](#licença) 
 ## Introdução 
 
-Este projeto foi desenvolvido como parte da posição de Analista de Dados na Tech4Humans, em colaboração com a Startup Ninja Job. O objetivo principal é analisar dados do The Look Ecommerce e apresentar insights de maneira interativa através de uma aplicação web construída com Streamlit. 
+Este projeto foi desenvolvido como parte da posição de Analista de Dados na Tech4Humans, em colaboração com a Ninja Startup Job. O objetivo principal é analisar dados do The Look Ecommerce e apresentar insights de maneira interativa através de uma aplicação web construída com Streamlit. 
 
 ## Instalação 
 
@@ -103,6 +111,7 @@ Análise do tráfego nas páginas do The Look Ecommerce com tabela e gráfico de
 -   Folium
 -   Python-dotenv
 -   Matplotlib
+-   DB-Dtypes
 
 ## Licença
 
