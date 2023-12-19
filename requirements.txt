@@ -5,3 +5,4 @@ google-cloud-bigquery
 folium
 python-dotenv
 matplotlib
+db-dtypes
