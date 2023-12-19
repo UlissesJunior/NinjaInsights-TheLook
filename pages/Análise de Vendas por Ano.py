@@ -1,17 +1,9 @@
-import os
-from dotenv import load_dotenv
 import streamlit as st
-from google.cloud import bigquery
-from google.oauth2 import service_account
 import pandas as pd
 import matplotlib.pyplot as plt
+from client.client import run_client
 
-credentials = service_account.Credentials.from_service_account_file('credentials.json')
-project_id = os.getenv("PROJECT_ID")
-client = bigquery.Client(credentials=credentials, project=project_id)
-
-def query_bigquery():
-    query_string = """
+query= """
         SELECT EXTRACT(YEAR FROM created_at) AS year,
                EXTRACT(MONTH FROM created_at) AS month,
                COUNT(*) AS num_sales
@@ -19,11 +11,11 @@ def query_bigquery():
         WHERE status = "Complete"
         GROUP BY year, month
         ORDER BY year, month
-    """
-    query_job = client.query(query_string)
-    results = query_job.result()
-    df = results.to_dataframe()
-    return df
+"""
+
+results = run_client(query)
+
+df = results.to_dataframe()
 
 def plot_yearly_sales(df_year, selected_year):
     plt.figure(figsize=(10, 6))
@@ -37,9 +29,7 @@ st.title("Análise de Vendas por Ano")
 
 st.subheader("Vendas por ano")
 
-df = query_bigquery()
-
-selected_year = st.slider("Escolha o ano", min_value=2019, max_value=2023, value=2019)
+selected_year = st.slider("Escolha o ano", min_value=min(df['year']), max_value=max(df['year']), value=min(df['year']))
 
 df_year = df[df['year'] == selected_year]
 df_year = df_year.sort_values(['year', 'month'])

@@ -19,7 +19,7 @@ st.title("Mapa de Calor de Usuários")
 
 HeatMap(heat_data).add_to(mymap)
 map_html = mymap._repr_html_()
-st.components.v1.html(map_html, width=700, height=500, scrolling=True)
+st.components.v1.html(map_html, height=430, scrolling=True)
 
-st.title("Dados Detalhados")
+st.subheader("Dados Detalhados")
 st.dataframe(df) 

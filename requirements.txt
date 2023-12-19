@@ -2,8 +2,6 @@ streamlit
 pandas
 plotly
 google-cloud-bigquery
-ipywidgets
 folium
-geopy
 python-dotenv
 matplotlib
